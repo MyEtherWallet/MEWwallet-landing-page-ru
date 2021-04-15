@@ -194,6 +194,10 @@ function calculate() {
   var amount = $('.js-amount-input').val();
 
   amount = amount.replace(' ','');
+  amount = amount.replace('.','');
+  amount = amount.replace(',','');
+  amount = amount.replace('-','');
+  amount = amount.replace('_','');
   amount = amount.replace('₽','');
   amount = amount.replace(/\s/g, '');;
 
@@ -241,6 +245,9 @@ function calculate() {
 
           numberAnimate(currentPrice * cryptoAmount);
 
+          setTimeout(function(){
+            stopConfeti();
+          }, 3000);
 
         } else {
 
@@ -286,16 +293,16 @@ var el = document.querySelector('.js-container');
 var containerEl = null;
 
 function startConfeti() {
-    if(containerEl == null) {
+    /*if(containerEl == null) {*/
       this._setupElements();
       this._renderConfetti();
-    } else {
-      $('.confetti-container').removeClass('hide');
-    }
+    /*} else {*/
+      // $('.confetti-container').removeClass('hide');
+    /*}*/
 }
 
 function stopConfeti() {
-  $('.confetti-container').addClass('hide');
+  $('.confetti-container').remove();
 }
 
 function _setupElements() {
