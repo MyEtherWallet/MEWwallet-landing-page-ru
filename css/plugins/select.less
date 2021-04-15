@@ -1,0 +1,461 @@
+/*
+ * Custom Select jQuery Plugin Base
+ */
+
+ .custom-select__option {
+    overflow: hidden;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    font-family: inherit;
+    white-space: nowrap;
+    text-align: left;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+ .custom-select {
+    position: relative;
+    margin-right: 8px;
+}
+  
+.custom-select__option--value {
+    position: relative;
+    height: 52px;
+    background: rgba(0, 0, 0, 0.01);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: block;
+    width: 230px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 52px;
+    letter-spacing: 0.02em;
+    color: #202124;
+    -webkit-appearance: none;
+
+    .screen-mobile({
+        height: 40px;
+        font-size: 16px;
+        line-height: 32px;
+        width: 210px;
+        margin-bottom: 16px;
+    });
+}
+
+.custom-select--active {
+    .custom-select__option--value {
+        background: transparent;
+        border-color: #ffffff;
+        z-index: 2;
+    }
+}
+  
+.custom-select__option-wrap {
+    position: relative;
+}
+
+.custom-select__input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border-width: 1px 0;
+    border-style: solid;
+    border-radius: 0;
+    font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.custom-select__dropdown {
+    position: absolute;
+    box-sizing: border-box;
+    width: calc(~'100% + 24px');
+    top: 100%;
+    left: -8px;
+    padding: 8px;
+
+    .custom-select__option {
+        padding: 8px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 0.02em;
+        color: #1D1D1F;
+        position: relative;
+        border-radius: 8px;
+        width: auto;
+        margin-left: 8px;
+
+        .screen-mobile({
+            font-size: 16px;
+            line-height: 32px;
+        });
+
+        &:after {
+            left: 8px !important;
+            top: 8px !important;
+        }
+    }
+}
+
+.custom-select--dropup .custom-select__dropdown {
+
+}
+
+/*
+* Custom Select jQuery Plugin Theme
+*/
+
+.custom-select__option:focus {
+outline: none;
+}
+
+.custom-select__option--value {
+    padding-right: 1.875rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.custom-select__option--value::before {
+    position: absolute;
+    .svg-svg--arrow_down;
+    .svg-svg--arrow_down-dims;
+    right: 13px;
+    top: 13px;
+    content: "";
+
+    .screen-mobile({
+        right: 7px;
+        top: 7px;
+    });
+}
+
+.custom-select--active .custom-select__option--value:hover, .custom-select--active .custom-select__option--value:focus {
+    background-color: #fff;
+}
+
+.custom-select__option--selected {
+    background-color: #fcfcfc;
+}
+
+.custom-select__option[disabled] {
+color: #a1a1a1;
+cursor: default;
+}
+
+.custom-select__option[disabled]:hover, .custom-select__option[disabled]:focus {
+background-color: transparent;
+}
+
+.custom-select__option-wrap {
+overflow-y: auto;
+max-height: 11.25rem;
+}
+
+.custom-select__option-wrap::-webkit-scrollbar {
+width: 16px;
+}
+
+.custom-select__option-wrap::-webkit-scrollbar-thumb {
+    background-color: #e6e6e6;
+    background-clip: padding-box;
+    border-width: 0 4px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.custom-select__input {
+    position: relative;
+    z-index: 1;
+    height: 2.25rem;
+    margin-top: -1px;
+    padding: 0 0.75rem;
+    border-color: #e6e6e6;
+    transform: translateY(1px);
+    font-size: 1rem;
+    color: #212121;
+}
+
+.custom-select__input:focus {
+outline: none;
+}
+
+.custom-select--dropup .custom-select__input {
+border-top-width: 0;
+margin-top: 0;
+transform: translateY(0);
+}
+
+.custom-select__dropdown {
+    overflow: hidden;
+    z-index: 1;
+    top: -8px;
+    background-color: #fff;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07), 0px 4px 8px rgba(0, 0, 0, 0.035);
+    border-radius: 8px;
+    padding-top: 60px;
+
+    .screen-mobile({
+        padding-top: 48px;
+    });
+}
+
+[data-value="ethereum"] {
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url('/pic/eth@2x.png') no-repeat;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+
+        .screen-mobile({
+            left: 4px;
+            top: 2px;
+        });
+    }
+}
+
+[data-value="uniswap"] {
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url('/pic/uniswap@2x.png') no-repeat;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+
+        .screen-mobile({
+            left: 4px;
+            top: 2px;
+        });
+    }
+}
+
+[data-value="link"] {
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url('/pic/link@2x.png') no-repeat;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+
+        .screen-mobile({
+            left: 4px;
+            top: 2px;
+        });
+    }
+}
+
+[data-value="aave"] {
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url('/pic/aave@2x.png') no-repeat;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+
+        .screen-mobile({
+            left: 4px;
+            top: 2px;
+        });
+    }
+}
+
+[data-value="maker"] {
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url('/pic/maker@2x.png') no-repeat;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+
+        .screen-mobile({
+            left: 4px;
+            top: 2px;
+        });
+    }
+}
+
+[data-value="havven"] {
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url('/pic/havven@2x.png') no-repeat;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+
+        .screen-mobile({
+            left: 4px;
+            top: 2px;
+        });
+    }
+}
+
+[data-value="sushi"] {
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url('/pic/sushi@2x.png') no-repeat;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+
+        .screen-mobile({
+            left: 4px;
+            top: 2px;
+        });
+    }
+}
+
+[data-value="compound-governance-token"] {
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url('/pic/compound@2x.png') no-repeat;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+
+        .screen-mobile({
+            left: 4px;
+            top: 2px;
+        });
+    }
+}
+
+[data-value="bancor"] {
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url('/pic/bankor@2x.png') no-repeat;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+
+        .screen-mobile({
+            left: 4px;
+            top: 2px;
+        });
+    }
+}
+
+[data-value="republic-protocol"] {
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url('/pic/ren@2x.png') no-repeat;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+
+        .screen-mobile({
+            left: 4px;
+            top: 2px;
+        });
+    }
+}
+
+[data-value="yearn-finance"] {
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url('/pic/yearn@2x.png') no-repeat;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+
+        .screen-mobile({
+            left: 4px;
+            top: 2px;
+        });
+    }
+}

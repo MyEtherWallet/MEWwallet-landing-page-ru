@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>MEWwallet by MyEtherWallet</title>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css?v=4" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+    <link href="/pic/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/pic/touch-icon.png" rel="apple-touch-icon">
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="container">
+            <a href="/" class="header__logo">MEW wallet</a>
+    
+            <div class="header__menu">
+                <a class="header__menu-link active" href="/">Приложение</a>
+                <!-- <a class="header__menu-link" href="#">Обучающие видео</a> -->
+                <a class="header__menu-link" href="https://kb.myetherwallet.com" target="_blank">Техподдержка</a>
+            </div>
+    
+            <!-- <a class="header__menu-language" href="#"><img src="/pic/rus-flag.svg" alt="" />Рус</a> -->
+    
+            <a href="javascript:void(0)" class="header__mobile-menu-link js-toggle-menu">
+                <span></span>
+                <span></span>
+            </a>
+    
+            <div class="header__mobile-menu js-menu">
+                <div class="header__mobile-menu-wrap">
+                    <div class="header__mobile-menu-links">
+                        <a class="header__mobile-menu-links-item active" href="/">Приложение</a><br />
+                        <!-- <a class="header__mobile-menu-links-item" href="#">Обучающие видео</a><br /> -->
+                        <a class="header__mobile-menu-links-item" href="https://kb.myetherwallet.com target="_blank"">Техподдержка</a>
+
+                        <!-- <a class="header__mobile-menu-language" href="#"><img src="/pic/rus-flag.svg" alt="" />Рус</a> -->
+
+                        <div class="header__mobile-menu-download">
+                            <a href="https://apps.apple.com/app/id1464614025" class="header__mobile-menu-download-item app-store" target="_blank"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.myetherwallet.mewwallet" class="header__mobile-menu-download-item google-play" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="start">
+        <div class="container">    
+            <div class="row justify-content-end">
+                <div class="col-6">
+                    <h1>Кошелёк №1 для покупки, хранения и передачи ETH и токенов</h1>
+                    <h3>Самый быстрый и простой способ «войти в крипту»</h3>
+                    <div class="start__animate" id="js-animate"></div>
+                </div>
+                <div class="col-6">
+                    <img src="/pic/start.png" srcset="/pic/start@2x.png 2x">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="download">
+        <div class="container">    
+            <div class="row justify-content-start align-items-center">
+                <div class="col-10">
+                    <h2 class="download__text">Всё для работы с Ethereum в одном мобильном приложении</h2>
+                    <div class="download__links">
+                        <a href="https://apps.apple.com/app/id1464614025" class="download__links-item app-store" target="_blank"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.myetherwallet.mewwallet" class="download__links-item google-play" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="container">    
+            <div class="row justify-content-end">
+                <div class="col-6">
+                    <img src="/pic/astronaut-img.png" srcset="/pic/astronaut-img@2x.png 2x" />
+                </div>
+                <div class="col-6">
+                    <h2>MEW wallet</h2>
+                    <p>Официальное мобильное приложение сервиса MyEtherWallet, <b>первого в истории кошелька для работы с блокчейном Ethereum</b>.</p>
+                    <p>Веб-версия MEW увидела свет в 2015 году, спустя неделю после запуска Ethereum. Сейчас это мировой стандарт для работы с Эфириум во всём мире. </p>
+                    <p>Мобильное приложение MEW — «сервис одного окна», объединяющий все востребованные функции для работы с криптовалютой ETH и токенами на Ethereum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fact">
+        <div class="container">    
+            <div class="row justify-content-end">
+                <div class="col-12">
+                    <h2>Интересный факт</h2>
+                    <p>С марта 2020 года курс Эфира вырос более чем на 1 300%.</p>
+                    <p>Даже Биткоин подорожал не так сильно.</p>
+
+                    <div class="fact__link">
+                        <p>Узнайте, сколько можно было бы заработать на ЕТН и самых популярных токенах.</p>
+                        <p><a href="javascript:void(0)" onclick="scrollToAnchor('.js-calculator')">Проверить</a></p>
+
+                    </div>
+                    <img src="/pic/graph.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="enter js-enter">
+        <div class="container">    
+            <div class="row justify-content-start align-items-center">
+                <div class="col-10">
+                    <h2 class="enter__text" id="animate-text">
+                        <span class="enter__text-first">MEW wallet</span>
+                        <span class="enter__text-second">быстрый, простой</span>
+                        <span class="enter__text-third">и безопасный способ</span>
+                        <span class="enter__text-fourth">«войти в крипту»</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="enter-items">
+        <div class="container">    
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="js-pin enter-items__image">
+                        <img src="/pic/enter1.png" srcset="/pic/enter1@2x.png 2x" id="img1" class="enter-items__image-item active" />
+                        <img src="/pic/enter2.png" srcset="/pic/enter2@2x.png 2x" id="img2" class="enter-items__image-item" />
+                        <img src="/pic/enter3.png" srcset="/pic/enter3@2x.png 2x" id="img3" class="enter-items__image-item" />
+                    </div>
+                    <div class="enter-items__item" id="sec1">
+                        <div class="enter-items__item-text">
+                            <h3>Купить ETH и оплатить банковской картой</h3>
+                            <p>Быстрая покупка ETH и оплата банковской картой Visa или Mastercard прямо в приложении MEW wallet.</p>
+                        </div>
+                    </div>
+                    <div class="enter-items__item" id="sec2">
+                        <div class="enter-items__item-text">
+                            <h3>Купить/обменять любые токены на Ethereum</h3>
+                            <p>Встроенный агрегатор агрегаторов токенов ERC-20. MEW выбирает лучший курс среди всех агрегаторов и позволяет купить токены, оплатив банковской картой.</p>
+                        </div>
+                    </div>
+                    <div class="enter-items__item" id="sec3">
+                        <div class="enter-items__item-text">
+                            <h3>Хранить и контролировать</h3>
+                            <p>Всегда перед глазами баланс ETH и токенов в вашем кошельке, их рыночная стоимость в выбранной валюте (доллары, евро, рубли) и история транзакций.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="enter-items-mobile">
+        <div class="container">    
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="js-carousel">
+                        <div class="enter-items-mobile__item">
+                            <img src="/pic/enter1.png" srcset="/pic/enter1@2x.png 2x" />
+                            <h3>Купить ETH и оплатить банковской картой</h3>
+                            <p>Быстрая покупка ETH и оплата банковской картой Visa или Mastercard прямо в приложении MEW wallet.</p>
+                        </div>
+                        <div class="enter-items-mobile__item">
+                            <img src="/pic/enter2.png" srcset="/pic/enter2@2x.png 2x" />
+                            <h3>Купить/обменять любые токены на Ethereum</h3>
+                            <p>Встроенный агрегатор агрегаторов токенов ERC-20. MEW выбирает лучший курс среди всех агрегаторов и позволяет купить токены, оплатив банковской картой.</p>
+                        </div>
+                        <div class="enter-items-mobile__item">
+                            <img src="/pic/enter3.png" srcset="/pic/enter3@2x.png 2x" />
+                            <h3>Хранить и контролировать</h3>
+                            <p>Всегда перед глазами баланс ETH и токенов в вашем кошельке, их рыночная стоимость в выбранной валюте (доллары, евро, рубли) и история транзакций.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="why">
+        <div class="container">    
+            <div class="row justify-content-start align-items-center">
+                <div class="col-12">
+                    <h2 class="why__text">Почему MEW?</h2>
+                    <div class="why__items">
+                        <div class="why__items-item">
+                            <div class="why__items-item-icon security"></div>
+                            <h3>Максимальная безопасность</h2>
+                            <p>Ключи хранятся локально на вашем устройстве. MEW не хранит пароли пользователей, не имеет доступа к средствам на кошельках.</p>
+                        </div>
+                        <div class="why__items-item">
+                            <div class="why__items-item-icon language"></div>
+                            <h3>Поддержка на русском</h2>
+                            <p>Русскоязычные специалисты готовы вникнуть в любую проблему с приложением и ответить на все связанные вопросы.</p>
+                        </div>
+                        <div class="why__items-item">
+                            <div class="why__items-item-icon freedom"></div>
+                            <h3>Настоящая независимость</h2>
+                            <p>Кошелёк принадлежит только вам, и только вы имеете доступ к транзакциям, данным о балансе и истории операций.</p>
+                        </div>
+                        <div class="why__items-item">
+                            <div class="why__items-item-icon accounts"></div>
+                            <h3>Много кошельков в одном приложении</h2>
+                            <p>Быстрое создание дополнительных аккаунтов и моментальное переключение между ними.</p>
+                        </div>
+                        <div class="why__items-item">
+                            <div class="why__items-item-icon smartDesign"></div>
+                            <h3>Умный дизайн: всё просто и понятно даже новичку</h2>
+                            <p>Популярные функции под рукой. Важная информация — прямо перед глазами.</p>
+                        </div>
+                        <div class="why__items-item">
+                            <div class="why__items-item-icon eth2"></div>
+                            <h3>В авангарде развития Ethereum</h2>
+                            <p>Доступ к новым возможностям блокчейна Ethereum. Например, уже доступен стейкинг Ethereum 2.0.<br /><a href="#">Что это? ></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="download-gray">
+        <div class="container">    
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 download-gray__wrap">
+                    <h2 class="download-gray__text">Попробовать все возможности Ethereum с MEW wallet</h2>
+                    <div class="download-gray__links">
+                        <a href="https://apps.apple.com/app/id1464614025" class="download-gray__links-item app-store" target="_blank"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.myetherwallet.mewwallet" class="download-gray__links-item google-play" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="investments">
+        <div class="container">    
+            <div class="row justify-content-end align-items-start investments__desc">
+                <div class="col-4">
+                    <img src="/pic/investments.svg" alt="" />
+                </div>
+                <div class="col-8">
+                    <h2 class="investments__text">Инвестиции в токены</h2>
+                    <p>MEW Wallet позволяет покупать, хранить и обменивать любые токены на Ethereum.</p>
+                    <p><a href="#" target="_blank">Что такое токены?</a> Говоря очень грубо и условно, это «акции» различных проектов на Ethereum. Даже когда курс криптовалюты ETH к доллару стабилен или падает, можно найти быстро растущие токены, на которых реально заработать.</p>
+                    <div class="investments__info-text">По сути, это та же игра на бирже, только с более высокой доходностью и более высокими рисками: токены могут дорожать на сотни процентов за день, и также быстро дешеветь.</div>
+                </div>
+            </div>
+            <div class="row justify-content-start align-items-start investments-carousel">
+                <div class="col-4 investments__item">
+                    <img src="/pic/tokens-img.png" srcset="/pic/tokens-img@2x.png 2x">
+                    <h3>Изучаем, выбираем, покупаем</h3>
+                    <p>График динамики курса и другая информация о токенах с возможностью моментальной покупки через децентрализованные биржи</p>
+                </div>
+                <div class="col-4 investments__item">
+                    <img src="/pic/screen.png" srcset="/pic/screen@2x.png 2x">
+                    <h3>Следим за курсом, докупаем</h3>
+                    <p>Раздел с новостями о токенах, чей курс демонстрирует стремительный рост или падение. Обновляется в режиме онлайн.</p>
+                </div>
+                <div class="col-4 investments__item">
+                    <img src="/pic/screen2.png" srcset="/pic/screen2@2x.png 2x">
+                    <h3>Фиксируем прибыль</h3>
+                    <p>Удобный способ зафиксировать прибыль, не выводя деньги из Ethereum — стейблкоины. Их курс привязан к доллару США.</p>
+                </div>
+            </div>
+            <div class="row justify-content-start align-items-start investments-carousel-mobile js-investments-carousel">
+                <div class="col-4 investments__item">
+                    <img src="/pic/tokens-img.png" srcset="/pic/tokens-img@2x.png 2x">
+                    <h3>Изучаем, выбираем, покупаем</h3>
+                    <p>График динамики курса и другая информация о токенах с возможностью моментальной покупки через децентрализованные биржи</p>
+                </div>
+                <div class="col-4 investments__item">
+                    <img src="/pic/screen.png" srcset="/pic/screen@2x.png 2x">
+                    <h3>Следим за курсом, докупаем</h3>
+                    <p>Раздел с новостями о токенах, чей курс демонстрирует стремительный рост или падение. Обновляется в режиме онлайн.</p>
+                </div>
+                <div class="col-4 investments__item">
+                    <img src="/pic/screen2.png" srcset="/pic/screen2@2x.png 2x">
+                    <h3>Фиксируем прибыль</h3>
+                    <p>Удобный способ зафиксировать прибыль, не выводя деньги из Ethereum — стейблкоины. Их курс привязан к доллару США.</p>
+                </div>
+            </div>
+            <div class="row justify-content-start align-items-start">
+                <div class="col-12">
+                    <div class="investments__info">
+                        <p>Важно! Информация, представленная на данном сайте и в разделе «Рынки» мобильного приложения MEW Wallet не является финансовыми рекомендациями. Все решения пользователь принимает на свой страх и риск.</p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="container">    
+            <div class="row justify-content-start align-items-start">
+                <div class="col-12">
+                    <h2>FAQ</h2>
+                    <p>Не нашли вопрос, который искали? Посмотрите в <a href="https://kb.myetherwallet.com/" target="_blank">базе знаний</a>.</p>
+
+                    <div class="faq__item">
+                        <a class="faq__item-link js-faq-link" href="javascript:void(0)">С какой суммой «заходить в крипту» в 2021 году? 100 $ хватит?</a>
+                        <div class="faq__item-content">
+                            <p>Мы не можем рекомендовать конкретные суммы. Но если стартовать сейчас с 100 $, вас вероятно разочаруют комиссии сети Ethereum — из-за большой нагрузки на сеть они могут составлять 50 $ и даже больше. Эти комиссии не зависят от MEW Wallet — всё дело в ажиотаже вокруг криптовалют и возросшей нагрузке на сеть Ethereum. Покупать ЕТН и токены на небольшие суммы, переводить их или пытаться обменять на обычные деньги при высоких комиссиях сети, к сожалению, не выгодно. При этом на сумме около 1 000 $ та же комиссия в 50 $ уже не кажется такой значительной, как при попытке перевести эквивалент 100 $.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <a class="faq__item-link js-faq-link" href="javascript:void(0)">«ПОЧЕМУ КОМИССИИ ЗА ТРАНЗАКЦИИ ТАК ВЕЛИКИ?!»</a>
+                        <div class="faq__item-content">
+                            <p>Комиссии за транзакции зависят от загруженности сети Ethereum и эти комиссии берёт именно сеть Ethereum, а не MEW. Единственное, что можно посоветовать — немного подождать. Буквально за пару часов размер комиссии может значительно измениться. Повторимся: с нынешним ажиотажем вокруг криптовалют нагрузка на сеть велика и, соответственно, сохраняются высокими комиссии сети. Совершать транзакции на небольшие суммы может быть откровенно невыгодно. При этом на сумме около 1 000 $ та же комиссия в 50 $ уже не кажется такой значительной, как при попытке перевести эквивалент 100 $.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <a class="faq__item-link js-faq-link" href="javascript:void(0)">Я могу использовать MEW Wallet с Биткоином и другими криптовалютами?</a>
+                        <div class="faq__item-content">
+                            <p>Нет. MyEtherWallet работает только с блокчейном Ethereum. MEW Wallet можно использовать для покупки, хранения и обмена ETH и любых токенов ERC20. Тем не менее, вы можете воспользоваться функцией <a href="https://kb.myetherwallet.com/ru/mewwallet/ren_mw/" target="_blank">телепортации биткоина</a> — перенести свои ВТС в сеть Ethereum (и при желании получить потом биткоины обратно в любой момент, без упущенной выгоды от изменения курса к доллару).<br /><a href="https://www.mewtopia.com/bitcoin-on-ethereum/" target="_blank">Что такое «обёрнутый биткоин»?</a></p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <a class="faq__item-link js-faq-link" href="javascript:void(0)">Почему Ethereum, а не Биткоин?</a>
+                        <div class="faq__item-content">
+                            <p>Спорный, глубокий и сложный вопрос — на эту тему написаны сотни статей и тысячи постов на профильных площадках. </p>
+                            <p>По нашему (команды MyEtherWallet) мнению, Ethereum — будущее криптовалют. Это постоянно развивающаяся экосистема, предоставляющая простор для творчества и большой спектр возможностей. Пользователи могут создавать свои проекты и приложения на блокчейне Ethereum, выпускать свои токены. Уже появляются свои отрасли внутри Эфириума — например, <a href="https://kb.myetherwallet.com/ru/dapps/whats_defi/" target="_blank">DeFi, децентрализованные финансы</a>. Это абсолютно независимая и открытая альтернатива привычной банковской системе, позволяющая использовать традиционные финансовые инструменты (кредиты, депозиты и т.д.) 
+                            <p>Прагматичным пользователям может быть интересно увидеть цифры: </p>
+                            <p>1. На Ethereum, как правило, ниже комиссии сети (в 1,5–2 раза в среднем) и выше скорость транзакций (в 5–10 раз быстрее, чем при переводе ВТС).</p>
+                            <p>2. Биткоин за последний год вырос на 888,43%, а ЕТН — на 1 361,29% (данные от 22.03.2021).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <a class="faq__item-link js-faq-link" href="javascript:void(0)">Я купил криптовалюту (токены). Теперь я стану миллионером? Вы гарантируете это?</a>
+                        <div class="faq__item-content">
+                            <p>Этого вам не сможет гарантировать никто. Мы (команда MEW Wallet) верим, что Эфириум и реализованные на нем проекты — это перспективные технологии, которые изменят мир. Но как это скажется на ценах ЕТН и токенов не знает никто. Крипто-рынки не рациональны, волатильны и подвержены манипуляциям. Эфириум проекты могут содержать в себе технические ошибки, которые могут вести к потере средств. От этого никто не застрахован, это нужно учитывать как неизбежный риск.</p>
+                            <p>Перед серьёзными инвестициями постарайтесь изучить как можно больше информации о принципах работы Ethereum (начать можно с нашей энциклопедии) и независимых данных о проекте, в который намерены вложиться. Следите за новостями рынка и старайтесь формировать своё собственное мнение, не полагаясь на суждения других людей. Не вкладывайте больше, чем можете себе позволить потерять. Не используйте для инвестиций заёмные средства. Будьте внимательны и осторожны: в крипто-мире много мошенников (см. наши советы по безопасности).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <a class="faq__item-link js-faq-link" href="javascript:void(0)">Как положить эфир (ETH) на кошелёк MEW wallet?</a>
+                        <div class="faq__item-content">
+                            <p>Самый простой способ пополнения — купить ETH и оплатить картой в самом приложении MEW wallet. Также вы можете использовать любые внешние биржи или перевести ETH с другого кошелька.<br /><a href="#" target="_blank">Инструкции по покупке ETH через приложение ></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="calculator js-calculator js-container">
+        <div class="container">    
+            <div class="row justify-content-start align-items-start">
+                <div class="col-12">
+                    <h2>Есть сомнения?</h2>
+                    <p>Побороть их поможет наша «машина времени». Посмотрите, сколько принесли ETH и популярные токены тем, кто не тратил время на сомнения.</p>
+                    <div class="calculator__inputs">
+                        <h4>Если бы я вложил</h4>
+                        <div class="calculator__inputs-wrap">
+                            <div class="amount-input-wrap">
+                                <input type="text" class="amount-input js-amount-input" value="7 000 ₽" />
+                                <select class="js-amount">
+                                    <option value="7000" selected="selected">7 000 ₽</option>
+                                    <option value="70000">70 000 ₽</option>
+                                    <option value="100000">100 000 ₽</option>
+                                </select>
+                            </div>
+                            <span>в</span>
+                            <div class="token-input-wrap">
+                                <select class="js-token">
+                                    <option value="ethereum" selected="selected">Ethereum</option>
+                                    <option value="uniswap">Uniswap</option>
+                                    <option value="link">Link</option>
+                                    <option value="havven">Synthetix</option>
+                                    <option value="aave">Aave</option>
+                                    <option value="sushi">Sushiswap</option>
+                                    <option value="compound-governance-token">Compound</option>
+                                    <option value="maker">Maker</option>
+                                    <option value="bancor">Bankor</option>
+                                    <option value="republic-protocol">Ren</option>
+                                    <option value="yearn-finance">Yearn.finance</option>
+                                </select>
+                            </div>
+                            <div class="date-input-wrap">
+                                <input class="date-input js-date datepicker-here" readonly type="text" value="14.03.2020" />
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="calculator__button js-button" onclick="calculate()"><span>Проверить -></span></a>
+                    </div>
+                    <div class="calculator__result js-result">
+                        <p>Стоимость моего портфеля сегодня составляла бы:</p>
+                        <div class="calculator__result-amount"><span class="js-result-amount">1 056 000</span> ₽</div>
+                        <p class="calculator__result-crypto-amount"></p>
+                    </div>
+                    <img src="/pic/timemachine.svg" class="calculator__peggy js-peggy" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-download">
+        <div class="container">    
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <a href="/" class="footer-download__logo"></a>
+                    <h2 class="footer-download__get-app">Попробовать Ethereum<br />с MEW wallet</h2>
+                    <p class="footer-download__get-app-text">Приложением № 1, сочетающим все нужные функции для работы с Эфиром.</p>
+
+                    <div class="footer-download__download">
+                        <a href="https://apps.apple.com/app/id1464614025" class="footer-download__download-link app-store" target="_blank"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.myetherwallet.mewwallet" class="footer-download__download-link google-play" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">   
+        <div class="row justify-content-start">
+            <div class="footer__soc-links">
+                <a href="https://www.facebook.com/MyEtherWallet/" target="_blank" class="footer__soc-links-item footer__soc-links-item--facebook"></a>
+                <a href="https://twitter.com/myetherwallet" target="_blank" class="footer__soc-links-item footer__soc-links-item--twitter"></a>
+                <a href="https://www.instagram.com/myetherwallet/" target="_blank" class="footer__soc-links-item footer__soc-links-item--instagram"></a>
+                <a href="https://www.linkedin.com/company/myetherwallet" target="_blank" class="footer__soc-links-item footer__soc-links-item--linkedin"></a>
+                <a href="https://github.com/MyEtherWallet" target="_blank" class="footer__soc-links-item footer__soc-links-item--github"></a>
+                <a href="https://www.reddit.com/r/MyEtherWallet/" target="_blank" class="footer__soc-links-item footer__soc-links-item--reddit"></a>
+                <a href="https://medium.com/@myetherwallet" target="_blank" class="footer__soc-links-item footer__soc-links-item--medium"></a>
+                <a href="https://vk.com/public190491855" target="_blank" class="footer__soc-links-item footer__soc-links-item--vk"></a>
+            </div>
+        </div> 
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <a href="https://kb.myetherwallet.com/" class="footer__link links" target="_blank">База знаний</a>
+                <a href="https://www.myetherwallet.com/" class="footer__link" target="_blank">MyEtherWallet.com</a>
+                <a href="https://team.myetherwallet.com/" class="footer__link" target="_blank">Команда</a>
+            </div>
+            <div class="col-6">
+                <a href="mailto:support@myetherwallet.com?subject=MEW%20wallet%20landing%20page%20private%20beta" class="footer__link right">Техподдержка</a>
+                <a href="https://www.myetherwallet.com/privacy-policy" class="footer__link right" target="_blank">Политика конфиденциальности</a>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <p class="footer__copyright">© 2021 MyEtherWallet. Все права защищены.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.min.js?v=4"></script>
+
+</body>
+</html>

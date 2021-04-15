@@ -1,0 +1,145 @@
+/**
+ * Переменные
+ **/
+
+@font: 'Manrope', sans-serif;
+@borderRadius: 5px;
+
+@bg: #ffffff;
+@fBg: #000000;
+@blueBg: #004ee6;
+@grayBg: #f7f8f8;
+@lightGrayBg: #f2f4f7;
+@black: #1D1D1F;
+@neutralDark: #DADCE0;
+@lightGray: #F7F7F7;
+@primary: #07A6B3;
+@neutralDarker: #5F6368;
+@neutralBlack: #202124;
+@neutralMiddle: #9EA0A3;
+
+@textColor: #202124;
+
+/****
+ * Миксины, разное
+ ****/
+
+.relative {
+    position: relative;
+}
+
+.sizing() {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.border-radius(@radius: @borderRadius) {
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.size(@width, @height: @width) {
+    width:  @width;
+    height: @height;
+}
+
+.relativePos(@top, @left:@top) {
+    position: relative;
+    top: @top;
+    left: @left;
+}
+
+.pseudo() {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+.menu-icon() {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+}
+
+.hover-opacity(@opacity: 0.75) {
+    cursor: pointer;
+
+    &:hover {
+        opacity: @opacity;
+    }
+}
+
+.transition(@property: all, @time: 0.3s) {
+    -webkit-transition: @property @time ease;
+            transition: @property @time ease;
+}
+
+.transition-transform(@time: 0.3s) {
+    -webkit-transition: @time cubic-bezier(0.25, 0.10, 0.25, 1);
+    -moz-transition: @time cubic-bezier(0.25, 0.10, 0.25, 1);
+    -o-transition: @time cubic-bezier(0.25, 0.10, 0.25, 1);
+    transition: @time cubic-bezier(0.25, 0.10, 0.25, 1);
+}
+
+.transform(@propvalue) {
+    -webkit-transform: @propvalue;
+        -ms-transform: @propvalue;
+            transform: @propvalue;
+}
+
+.rotate(@degree) {
+    -webkit-transform: rotate(@degree);
+        -ms-transform: rotate(@degree);
+            transform: rotate(@degree);
+}
+
+.scale(@scale) {
+    -webkit-transform: scale(@scale);
+        -ms-transform: scale(@scale);
+            transform: scale(@scale);
+}
+
+.transform-origin(@x, @y) {
+    -webkit-transform-origin: @x @y;
+        -ms-transform-origin: @x @y;
+            transform-origin: @x @y;
+}
+
+.placeholder(@color){
+
+}
+
+/* =============================================================================
+   Screen size variables
+   ========================================================================== */
+
+@screen-tablet:                    960px;
+@screen-desktop:                    1366px;
+@screen-mobile:                    740px;
+@screen-mobile-l:                    740px;
+
+/* =============================================================================
+   Media queries for different screen sizes
+   ========================================================================== */
+
+// Tablet
+.screen-tablet(@rules) {
+    @media (max-width: @screen-tablet) { @rules(); }
+}
+
+// Desktop
+.screen-desktop(@rules) {
+    @media (max-width: @screen-desktop) { @rules(); }
+}
+
+// Mobile L
+.screen-mobile-l(@rules) {
+    @media (max-width: @screen-mobile-l) { @rules(); }
+}
+
+// Mobile
+.screen-mobile(@rules) {
+    @media (max-width: @screen-mobile) { @rules(); }
+}
