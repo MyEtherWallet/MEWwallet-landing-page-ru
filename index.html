@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>MEWwallet by MyEtherWallet</title>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css?v=5" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css?v=6" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
     <link href="/pic/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="/pic/touch-icon.png" rel="apple-touch-icon">
@@ -14,12 +14,20 @@
         <div class="container">
             <a href="/" class="header__logo">MEW wallet</a>
     
+            
             <div class="header__menu">
-                <a class="header__menu-link active" href="/">Приложение</a>
-                <!-- <a class="header__menu-link" href="#">Обучающие видео</a> -->
-                <a class="header__menu-link" href="https://kb.myetherwallet.com/ru/" target="_blank">Техподдержка</a>
+                <!-- <a class="header__menu-link active" href="/">Приложение</a>
+                <a class="header__menu-link" href="#">Обучающие видео</a>
+                <a class="header__menu-link" href="https://kb.myetherwallet.com/ru/" target="_blank">Техподдержка</a> -->
             </div>
-    
+
+            <a class="header__menu-link right" target="_blank" href="https://www.myetherwallet.com/ru/">MyEtherWallet.com &gt;</a>
+
+            <div class="header__download">
+                <a href="https://apps.apple.com/app/id1464614025" class="app-store" target="_blank"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.myetherwallet.mewwallet" class="google-play" target="_blank"></a>
+            </div>
+
             <!-- <a class="header__menu-language" href="#"><img src="/pic/rus-flag.svg" alt="" />Рус</a> -->
     
             <a href="javascript:void(0)" class="header__mobile-menu-link js-toggle-menu">
@@ -30,11 +38,10 @@
             <div class="header__mobile-menu js-menu">
                 <div class="header__mobile-menu-wrap">
                     <div class="header__mobile-menu-links">
-                        <a class="header__mobile-menu-links-item active" href="/">Приложение</a><br />
-                        <!-- <a class="header__mobile-menu-links-item" href="#">Обучающие видео</a><br /> -->
+                        <!-- <a class="header__mobile-menu-links-item active" href="/">Приложение</a><br />
+                        <a class="header__mobile-menu-links-item" href="#">Обучающие видео</a><br />
                         <a class="header__mobile-menu-links-item" href="https://kb.myetherwallet.com/ru/" target="_blank"">Техподдержка</a>
-
-                        <!-- <a class="header__mobile-menu-language" href="#"><img src="/pic/rus-flag.svg" alt="" />Рус</a> -->
+                        <a class="header__mobile-menu-language" href="#"><img src="/pic/rus-flag.svg" alt="" />Рус</a> -->
 
                         <div class="header__mobile-menu-download">
                             <a href="https://apps.apple.com/app/id1464614025" class="header__mobile-menu-download-item app-store" target="_blank"></a>
@@ -332,7 +339,7 @@
                             <p>По нашему (команды MyEtherWallet) мнению, Ethereum — будущее криптовалют. Это постоянно развивающаяся экосистема, предоставляющая простор для творчества и большой спектр возможностей. Пользователи могут создавать свои проекты и приложения на блокчейне Ethereum, выпускать свои токены. Уже появляются свои отрасли внутри Эфириума — например, <a href="https://kb.myetherwallet.com/ru/dapps/whats_defi/" target="_blank">DeFi, децентрализованные финансы</a>. Это абсолютно независимая и открытая альтернатива привычной банковской системе, позволяющая использовать традиционные финансовые инструменты (кредиты, депозиты и т.д.) 
                             <p>Прагматичным пользователям может быть интересно увидеть цифры: </p>
                             <p>1. На Ethereum, как правило, ниже комиссии сети (в 1,5–2 раза в среднем) и выше скорость транзакций (в 5–10 раз быстрее, чем при переводе ВТС).</p>
-                            <p>2. Биткоин за последний год вырос на 888,43%, а ЕТН — на 1 361,29% (данные от 22.03.2021).</p>
+                            <p>2. Биткоин за последний год вырос на 846%, а ЕТН — на 1 485% (данные от 15.04.2021).</p>
                         </div>
                     </div>
 
@@ -366,11 +373,6 @@
                         <div class="calculator__inputs-wrap">
                             <div class="amount-input-wrap">
                                 <input type="text" class="amount-input js-amount-input" value="7 000 ₽" />
-                                <select class="js-amount">
-                                    <option value="7000" selected="selected">7 000 ₽</option>
-                                    <option value="70000">70 000 ₽</option>
-                                    <option value="100000">100 000 ₽</option>
-                                </select>
                             </div>
                             <span>в</span>
                             <div class="token-input-wrap">
@@ -456,7 +458,7 @@
     </div>
 </div>
 
-<script src="js/script.min.js?v=5"></script>
+<script src="js/script.min.js?v=6"></script>
 
 </body>
 </html>

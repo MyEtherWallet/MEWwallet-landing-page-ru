@@ -3776,6 +3776,13 @@ $(function () {
     $(this).val(n.toLocaleString() + " ₽");
   });
 
+  $(".js-amount-input").on('keyup', function() {
+    stopConfeti();
+    $('.js-button').show();
+    $('.js-peggy').show();
+    $('.js-result').hide();
+  });
+
   $('.js-carousel').slick({
     dots: true,
   });
@@ -3852,13 +3859,8 @@ function calculate() {
   var name = $('.js-token').val();
   var amount = $('.js-amount-input').val();
 
-  amount = amount.replace(' ','');
-  amount = amount.replace('.','');
-  amount = amount.replace(',','');
-  amount = amount.replace('-','');
-  amount = amount.replace('_','');
-  amount = amount.replace('₽','');
-  amount = amount.replace(/\s/g, '');;
+  amount = amount.replace(/\s/g, '');
+  amount = amount.replace(/[^0-9]/g, "");
 
   amount = parseInt(amount);
 

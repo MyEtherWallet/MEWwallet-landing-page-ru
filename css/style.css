@@ -4156,6 +4156,17 @@ body.fixed {
 .header__menu-link:hover {
   color: #dadce0;
 }
+.header__menu-link.right {
+  color: #07a6b3;
+  position: absolute;
+  right: 0;
+  top: 33px;
+}
+@media (max-width: 960px) {
+  .header__menu-link.right {
+    display: none;
+  }
+}
 .header__menu-language {
   padding-right: 22px;
   position: absolute;
@@ -4190,6 +4201,41 @@ body.fixed {
   background-position: 64.20545746388443% 69.3103448275862%;
   width: 26px;
   height: 26px;
+}
+.header__download {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+.header__download a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 3px;
+  text-decoration: none;
+}
+.header__download a.app-store {
+  background: url("svg/sprite.css-62b4c212.svg") no-repeat;
+  background-position: 25.048169556840076% 72.3021582733813%;
+  width: 130px;
+  height: 50px;
+}
+.header__download a.google-play {
+  background: url("svg/sprite.css-62b4c212.svg") no-repeat;
+  background-position: 45.03968253968254% 58.992805755395686%;
+  width: 145px;
+  height: 50px;
+}
+.header.fixed .header__menu-link.right {
+  display: none;
+}
+.header.fixed .header__download {
+  display: block;
+}
+@media (max-width: 960px) {
+  .header.fixed .header__download {
+    display: none;
+  }
 }
 .header__mobile-menu {
   visibility: hidden;
@@ -4246,7 +4292,7 @@ body.fixed {
   left: 7px;
 }
 .header__mobile-menu-links {
-  padding-top: 107px;
+  padding-top: 167px;
   text-align: left;
   padding-left: 42px;
 }
@@ -6564,34 +6610,33 @@ body.fixed {
   position: relative;
 }
 .amount-input {
-  border-radius: 8px;
-  width: 174px;
-  line-height: 40px;
-  position: absolute;
-  left: 16px;
-  top: 6px;
-  z-index: 1;
-  border: 0 none;
+  position: relative;
+  height: 52px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  border-radius: 8px;
   display: block;
+  width: 220px;
+  padding-left: 16px;
+  padding-right: 16px;
   font-weight: bold;
   font-size: 22px;
+  line-height: 52px;
   letter-spacing: 0.02em;
   color: #202124;
   -webkit-appearance: none;
-  outline: none;
+  margin-right: 8px;
 }
 .amount-input.error {
   border-color: red;
 }
 @media (max-width: 740px) {
   .amount-input {
-    height: 32px;
+    height: 40px;
     font-size: 16px;
     line-height: 32px;
-    width: 134px;
-    left: 16px;
-    top: 4px;
+    width: 190px;
+    margin-bottom: 16px;
   }
 }
 .date-input-wrap {

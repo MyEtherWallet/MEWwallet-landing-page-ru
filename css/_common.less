@@ -182,6 +182,17 @@ body.fixed {
       &:hover {
         color: @neutralDark;
       }
+
+      &.right {
+        color: #07a6b3;
+        position: absolute;
+        right: 0;
+        top: 33px;
+
+        .screen-tablet({
+          display: none;
+        })
+      }
     }
 
     &-language {
@@ -217,6 +228,45 @@ body.fixed {
         .svg-svg--arrow_down;
         .svg-svg--arrow_down-dims;
       }
+    }
+  }
+
+  &__download {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 20px;
+
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 3px;
+      text-decoration: none;
+
+      &.app-store {
+          .svg-svg--app-store-badge-min;
+          .svg-svg--app-store-badge-min-dims;
+      }
+
+      &.google-play {
+          .svg-svg--google_play_bage-min;
+          .svg-svg--google_play_bage-min-dims;
+      }
+    }
+  }
+
+  &.fixed {
+
+    .header__menu-link.right {
+      display: none;
+    }
+
+    .header__download {
+      display: block;
+
+      .screen-tablet({
+        display: none;
+      })
     }
   }
 
@@ -281,7 +331,7 @@ body.fixed {
     }
 
     &-links {
-      padding-top: 107px;
+      padding-top: 167px;
       text-align: left;
       padding-left: 42px;
 

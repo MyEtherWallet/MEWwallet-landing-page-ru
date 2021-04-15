@@ -32,35 +32,33 @@
 }
 
 .amount-input {
-    border-radius: 8px;
-    width: 174px;
-    font-size: 22px;
-    line-height: 40px;
-    position: absolute;
-    left: 16px;
-    top: 6px;
-    z-index: 1;
-    border: 0 none;
+    position: relative;
+    height: 52px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
-    display: block;;
+    border-radius: 8px;
+    display: block;
+    width: 220px;
+    padding-left: 16px;
+    padding-right: 16px;
     font-weight: bold;
     font-size: 22px;
+    line-height: 52px;
     letter-spacing: 0.02em;
     color: #202124;
     -webkit-appearance: none;
-    outline: none;
+    margin-right: 8px;
 
     &.error {
         border-color: red;
     }
 
     .screen-mobile({
-        height: 32px;
+        height: 40px;
         font-size: 16px;
         line-height: 32px;
-        width: 134px;
-        left: 16px;
-        top: 4px;
+        width: 190px;
+        margin-bottom: 16px;
     });
 }
 
