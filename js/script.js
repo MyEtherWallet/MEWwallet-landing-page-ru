@@ -3852,6 +3852,8 @@ function calculate() {
   stopConfeti();
 
   var currDate = new Date();
+  console.log(currDate);
+
   var dateInput = $('.js-date');
   var date = dateInput[0].value;
   var dateArr = date.split('.');
@@ -3867,9 +3869,9 @@ function calculate() {
   if(!!date && !!name) {
     $('.js-date').removeClass('error');
 
-    var month = currDate.getMonth() + 1
+    var month = currDate.getUTCMonth() + 1
 
-    var url = 'https://api.coingecko.com/api/v3/coins/' + name + '/history?date=' + currDate.getDate() + '-' + (month > 9 ? '0' + month : month) + '-' + currDate.getFullYear();
+    var url = 'https://api.coingecko.com/api/v3/coins/' + name + '/history?date=' + currDate.getUTCDate() + '-' + (month > 9 ? '0' + month : month) + '-' + currDate.getUTCFullYear();
   
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url);
