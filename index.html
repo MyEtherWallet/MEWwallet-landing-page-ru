@@ -314,7 +314,7 @@
                     <div class="faq__item">
                         <a class="faq__item-link js-faq-link" href="javascript:void(0)">С какой суммой заходить в крипту в 2021 году? 100 $ хватит?</a>
                         <div class="faq__item-content">
-                            <p>Мы не можем рекомендовать конкретные суммы. Но, если стартовать ейчас с суммы 100 $, то вас, вероятно, разочаруют комиссии Ethereum, ведь из-за большой нагрузки на сеть они могут составлять 50 $ и даже больше. Эти комиссии не зависят от MEW wallet — всё дело в ажиотаже вокруг криптовалют и возросшей нагрузке на сеть Ethereum. Покупать ЕТН и токены на небольшие суммы, переводить их или пытаться обменять на обычные деньги при высоких комиссиях сети, к сожалению, не выгодно. При этом на сумме около 1000 $ та же комиссия в 50 $ уже не кажется столь значительной, как при попытке перевести эквивалент 100 $.</p>
+                            <p>Мы не можем рекомендовать конкретные суммы. Но, если стартовать cейчас с суммы 100 $, то вас, вероятно, разочаруют комиссии Ethereum, ведь из-за большой нагрузки на сеть они могут составлять 50 $ и даже больше. Эти комиссии не зависят от MEW wallet — всё дело в ажиотаже вокруг криптовалют и возросшей нагрузке на сеть Ethereum. Покупать ЕТН и токены на небольшие суммы, переводить их или пытаться обменять на обычные деньги при высоких комиссиях сети, к сожалению, не выгодно. При этом на сумме около 1000 $ та же комиссия в 50 $ уже не кажется столь значительной, как при попытке перевести эквивалент 100 $.</p>
                         </div>
                     </div>
 
@@ -328,7 +328,7 @@
                     <div class="faq__item">
                         <a class="faq__item-link js-faq-link" href="javascript:void(0)">Я могу использовать MEW wallet с Биткоином и другими криптовалютами?</a>
                         <div class="faq__item-content">
-                            <p>Нет. MyEtherWallet работает только с блокчейном Ethereum. MEW wallet можно использовать для покупки, хранения и обмена ETH и любых токенов ERC-20. Также вы можете воспользоваться функцией <a href="https://kb.myetherwallet.com/ru/mewwallet/ren_mw/" target="_blank">телепортации биткоина</a> ─ перенести свои ВТС в сеть Ethereum и потом, при желании, получить биткоины обратно в любой момент, без упущенной выгоды от изменения курса к доллару.<br /><a href="https://www.mewtopia.com/bitcoin-on-ethereum/" target="_blank">Что такое «обёрнутый биткоин»?</a></p>
+                            <p>Нет. MyEtherWallet работает только с блокчейном Ethereum. MEW wallet можно использовать для покупки, хранения и обмена ETH и любых токенов ERC-20. Также вы можете воспользоваться функцией <a href="https://kb.myetherwallet.com/ru/mewwallet/ren_mw/" target="_blank">телепортации биткоина</a> ─ перенести свои ВТС в сеть Ethereum и потом, при желании, получить биткоины обратно в любой момент, без упущенной выгоды от изменения курса к доллару.<br /><a href="https://www.mewtopia.com/ru/bitcoin-on-ethereum/" target="_blank">Что такое «обёрнутый биткоин»?</a></p>
                         </div>
                     </div>
 
@@ -460,6 +460,20 @@
 </div>
 
 <script src="js/script.min.js?v=8"></script>
+
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="https://mewwallet.matomo.cloud/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/mewwallet.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
 
 </body>
 </html>
