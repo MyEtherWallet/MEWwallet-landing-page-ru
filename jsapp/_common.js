@@ -82,6 +82,14 @@ $(function () {
 
   datepicker.selectDate(new Date(2020, 2, 14));
 
+  $('.js-calculator-reset').on('click', function(e){
+    updateSelects();
+    stopConfeti();
+    $('.js-button').show();
+    $('.js-peggy').show();
+    $('.js-result').hide();
+  })
+
   $('.js-token').on('change', function(e){
     updateSelects();
     stopConfeti();
@@ -172,6 +180,28 @@ $(function () {
 
 function updateSelects() {
   var options = document.querySelectorAll('.token-input-wrap .custom-select__option');
+  var datepicker = $('.js-date').data('datepicker');
+
+  switch (document.querySelector('.js-token').value) {
+    case "uniswap":
+      datepicker.selectDate(new Date(2020, 8, 17));
+      break;
+    case "aave":
+      datepicker.selectDate(new Date(2020, 9, 3));
+      break;
+    case "sushi":
+      datepicker.selectDate(new Date(2020, 7, 28));
+      break;
+    case "compound-governance-token":
+      datepicker.selectDate(new Date(2020, 5, 16));
+      break;
+    case "yearn-finance":
+      datepicker.selectDate(new Date(2020, 6, 18));
+      break;
+    default:
+      datepicker.selectDate(new Date(2020, 2, 14));
+  }
+
 
   options.forEach(function(item){
     var select = document.querySelector('.js-token');
@@ -218,6 +248,19 @@ function calculate() {
     xhr.open('GET', url);
     xhr.responseType = 'json';
     xhr.send();
+
+    var currAmount = amount;
+
+    $('.js-result-amount').text(Math.ceil(amount)); 
+
+    $('.js-button').hide();
+    $('.js-peggy').hide();
+    $('.js-result').show();
+
+    var loading = setInterval(function() {
+      currAmount = currAmount + 1
+      $('.js-result-amount').text(Math.ceil(currAmount)); 
+    }, 1000);
   
     xhr.onload = function() {
       var currentPrice = xhr.response.market_data.current_price.rub;
@@ -230,8 +273,6 @@ function calculate() {
       xhr2.responseType = 'json';
       xhr2.send();
 
-      $('.js-result-amount').text(Math.ceil(amount)); 
-    
       xhr2.onload = function() {
         if(!!xhr2.response.market_data) {
 
@@ -241,17 +282,17 @@ function calculate() {
 
           $('.calculator__result-crypto-amount').html(cryptoAmount.toFixed(3) + ' ' + symbol);
 
-          startConfeti();
-
-          $('.js-button').hide();
-          $('.js-peggy').hide();
-          $('.js-result').show();
+          clearInterval(loading);
 
           numberAnimate(currentPrice * cryptoAmount);
 
           setTimeout(function(){
+            startConfeti();
+          }, 600);
+
+          setTimeout(function(){
             stopConfeti();
-          }, 3000);
+          }, 3600);
 
         } else {
 
@@ -306,7 +347,8 @@ function startConfeti() {
 }
 
 function stopConfeti() {
-  $('.confetti-container').remove();
+  clearInterval(this.confettiInterval)
+  // $('.confetti-container').remove();
 }
 
 function _setupElements() {
