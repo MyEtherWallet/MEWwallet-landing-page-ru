@@ -46,6 +46,14 @@ $(window).load(function() {
     }
 
   });
+
+  if(window.location.hash) {
+    $('body').scrollTo($(window.location.hash).offset().top-100, 500);
+    
+    $(window.location.hash).next().slideToggle();
+    $(window.location.hash).toggleClass('open');
+  }
+
 });
 
 $(document).scroll(function() {
