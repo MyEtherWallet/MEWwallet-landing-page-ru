@@ -152,12 +152,15 @@ outline: none;
 }
 
 .custom-select__option[disabled] {
-color: #a1a1a1;
-cursor: default;
+    cursor: default;
+
+    &:before {
+        display: none;
+    }
 }
 
 .custom-select__option[disabled]:hover, .custom-select__option[disabled]:focus {
-background-color: transparent;
+    background-color: transparent;
 }
 
 .custom-select__option-wrap {

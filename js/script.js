@@ -3929,7 +3929,31 @@ $(window).load(function() {
     $(window.location.hash).toggleClass('open');
   }
 
+  $(".js-amount-input").on('focus', function() {
+    setTimeout((function(el) {
+        var strLength = el.value.length;
+        return function() {
+            if(el.setSelectionRange !== undefined) {
+                el.setSelectionRange(strLength, strLength - 2);
+            } else {
+                $(el).val(el.value);
+            }
+    }}(this)), 0);
+  });
 });
+
+function setCaretPosition(ctrl, pos) {
+  if (ctrl.setSelectionRange) {
+    ctrl.focus();
+    ctrl.setSelectionRange(pos, pos);
+  } else if (ctrl.createTextRange) {
+    var range = ctrl.createTextRange();
+    range.collapse(true);
+    range.moveEnd('character', pos);
+    range.moveStart('character', pos);
+    range.select();
+  }
+}
 
 $(document).scroll(function() {
 
@@ -3971,6 +3995,9 @@ $(function () {
     $('.js-button').show();
     $('.js-peggy').show();
     $('.js-result').hide();
+
+    $(".js-amount-input").val("").focus();
+
   })
 
   $('.js-token').on('change', function(e){
@@ -4013,6 +4040,28 @@ $(function () {
     $('.js-button').show();
     $('.js-peggy').show();
     $('.js-result').hide();
+
+    var n = parseInt($(this).val().replace(/\D/g,''), 10);
+
+    if(n) {
+
+      $(this).val(n.toLocaleString() + " ₽");
+
+      setTimeout((function(el) {
+          var strLength = el.value.length;
+          return function() {
+              if(el.setSelectionRange !== undefined) {
+                  el.setSelectionRange(strLength, strLength - 2);
+              } else {
+                  $(el).val(el.value);
+              }
+      }}(this)), 0);
+
+    } else {
+
+      $(this).val("");
+
+    }
   });
 
   $('.js-carousel').slick({
@@ -4106,7 +4155,6 @@ function calculate() {
   stopConfeti();
 
   var currDate = new Date();
-  console.log(currDate);
 
   var dateInput = $('.js-date');
   var date = dateInput[0].value;
@@ -4134,7 +4182,7 @@ function calculate() {
 
     var currAmount = amount;
 
-    $('.js-result-amount').text(Math.ceil(amount)); 
+    $('.js-result-amount').text(Math.ceil(currAmount)); 
 
     $('.js-button').hide();
     $('.js-peggy').hide();
@@ -4147,6 +4195,9 @@ function calculate() {
   
     xhr.onload = function() {
       var currentPrice = xhr.response.market_data.current_price.rub;
+
+      // console.log(xhr.response.market_data.current_price.rub, amount);
+
       var symbol = xhr.response.symbol;
 
       var url2 = 'https://api.coingecko.com/api/v3/coins/' + name + '/history?date=' + dateArr[0] + '-' + dateArr[1] + '-' + dateArr[2];
@@ -4158,6 +4209,8 @@ function calculate() {
 
       xhr2.onload = function() {
         if(!!xhr2.response.market_data) {
+
+          // console.log(xhr2.response.market_data.current_price.rub, amount);
 
           var enterPrice = xhr2.response.market_data.current_price.rub;
 

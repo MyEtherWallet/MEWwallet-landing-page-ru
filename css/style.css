@@ -5272,8 +5272,10 @@ body.fixed {
   background-color: #fcfcfc;
 }
 .custom-select__option[disabled] {
-  color: #a1a1a1;
   cursor: default;
+}
+.custom-select__option[disabled]:before {
+  display: none;
 }
 .custom-select__option[disabled]:hover,
 .custom-select__option[disabled]:focus {
